@@ -21,7 +21,11 @@ username: str = input()
 if(username not in login_system):
     print("User not found. Exiting.")
 #If the username is valid, ask the user to provide their password.
+print("Enter password: ")
+password: str = input()
 #Check if the provided password matches the one stored in the dictionary for that user.
+if(password != login_system.get(username)):
+    print("Access Denied.")
 #If the password is correct, assign a security level. #If the user is "guest", assign a "Guest" security level. For all other valid users, assign a "Security Level 1".
 #The program should end by printing a greeting to the username and letting them know their security level.
 #If the password is incorrect, print an "Access Denied" message and exit.
